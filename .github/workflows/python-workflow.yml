@@ -8,6 +8,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+      with:
+        sparse-checkout: .
+
+    - name: Check requirements is here
+      run: |
+        ls -lah
+        cat requirements.txt
+        
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
