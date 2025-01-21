@@ -13,6 +13,11 @@ jobs:
       with:
         python-version: 3.11
 
+    - name: Download requirements.txt
+      uses: actions/download-artifact@v3
+      with:
+        name: requirements.txt
+    
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
